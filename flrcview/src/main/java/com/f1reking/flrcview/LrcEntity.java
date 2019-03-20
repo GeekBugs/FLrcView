@@ -58,7 +58,7 @@ public class LrcEntity implements Comparable<LrcEntity> {
         return (int) (time - lrcEntity.getTime());
     }
 
-    private static List<LrcEntity> parseLrc(File lrcFile) {
+    public static List<LrcEntity> parseLrc(File lrcFile) {
         if (null == lrcFile || !lrcFile.exists()) {
             return null;
         }
@@ -81,7 +81,7 @@ public class LrcEntity implements Comparable<LrcEntity> {
         return list;
     }
 
-    private static List<LrcEntity> parseLrc(String lrcText) {
+    public static List<LrcEntity> parseLrc(String lrcText) {
         if (TextUtils.isEmpty(lrcText)) {
             return null;
         }
